@@ -10,10 +10,10 @@ Puedes acceder a la aplicación en el siguiente enlace:
 
 ## Tabla de Contenidos
 
-- [Descripción](#descripción)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Uso](#uso)
+1. [Descripción](#descripción)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+4. [Uso](#uso)
 
 ## Descripción
 
