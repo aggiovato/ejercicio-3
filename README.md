@@ -1,4 +1,6 @@
-# Ejercicio 3: Script - Cálculo de NIF
+![Logo de la aplicación](./assets/logo_ej_3.svg)
+
+# Ejercicio 3: Script - Cálculo de NIF 
 
 Este proyecto es una aplicación web sencilla que permite a los usuarios introducir un número de NIF (DNI) y obtener la letra correspondiente utilizando el algoritmo oficial.
 
@@ -42,6 +44,9 @@ El proyecto está organizado en la siguiente estructura de archivos:
 - **Git/GitHub**: Control de versiones y alojamiento del repositorio.
 
 ## Uso
+
+![Preview de la web-app](./assets/image.png)
+
 
 1. **Introduce el NIF**:
 
