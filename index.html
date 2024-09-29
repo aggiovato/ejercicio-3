@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- ICONO DE LA WEB -->
+    <link rel="icon" type="image/svg+xml" href="/assets/logo_ej_3.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 3: SCRIPT</title>
+
+    <!-- STYLESHEET PERSONALIZADA -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- FONT NUNITO IMPORTACIÓN -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICON IMPORTACIÓN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER (SORT OF)-->
+    <div class="text">
+      <h2>Introduce los números de tu NIF</h2>
+      <h5>Recuerda que estos deben estar entre 0 y 99999999...</h5>
+    </div>
+
+    <!-- IMPLEMENTATION -->
+    <div class="row">
+      <input
+        type="number"
+        id="inp-num"
+        placeholder="########"
+        min="0"
+        max="99999999"
+      />
+      <button id="btn">Calcular</button>
+    </div>
+
+    <!-- HIDDEN MESSAGE -->
+    <div class="message" id="message"></div>
+
+    <!-- SCRIPT MODULE => PARA USAR IMPORT-->
+    <script type="module">
+      import { letters } from "./scripts/letters.js"; // se importa el array
+      import { calculateNIF } from "./scripts/nif.js"; // se importa la funcion
+
+      // funcion para copiar to clipboard
+      const handleSpanClick = () => {
+        const letter_span = document.getElementById("letter-span");
+        navigator.clipboard
+          .writeText(letter_span.innerText)
+          .then(() => {
+            const icon = document.querySelector(".icon");
+            icon.classList.add("icon-show");
+
+            setTimeout(() => {
+              icon.classList.remove("icon-show");
+            }, 1500);
+          })
+          .catch((err) => {
+            console.log("Error al copiar el texto: ", err);
+          });
+      };
+
+      const handleClick = () => {
+        // funcion que ejecuta la logica del evento onclick
+        const nif_input = document.getElementById("inp-num"); // nif input
+        const nif_num = nif_input.value;
+        const message_div = document.getElementById("message"); // hidden message
+
+        const [letter, isShowable] = calculateNIF(nif_input, letters); // lógica de cálculo
+
+        if (isShowable) {
+          // se puede mostrar el mensaje
+          const message_html = `<h3>Tu NIF completo es 
+            <span class="highlight-num">${nif_num}</span>
+            <span class="highlight-letter" id="letter-span">${letter}</span>
+            </h3>
+            <div class="icon">
+                <i class="fa-solid fa-copy"></i>&nbsp;copiado!
+            </div>`;
+          message_div.innerHTML = message_html; // se pasa como html
+          message_div.classList.add("message-show"); // se añade la clase para mostrar
+
+          const letter_span = document.getElementById("letter-span");
+          letter_span.addEventListener("click", handleSpanClick);
+        } else {
+          // no se puede mostrar, se quita la clase
+          message_div.classList.remove("message-show");
+        }
+      };
+
+      const btn = document.getElementById("btn"); // se toma el elemento button
+      btn.addEventListener("click", handleClick); // se le agrega el evento
+    </script>
+  </body>
+</html>
