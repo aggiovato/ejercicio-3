@@ -17,6 +17,8 @@ div {
   margin: 5px;
 }
 
+/* ESTILOS TEXTO*/
+
 .text {
   display: flex;
   flex-direction: column;
@@ -32,6 +34,8 @@ div {
 .text h5 {
   margin-block: 10px;
 }
+
+/* ESTILOS INPUT Y BUTTON*/
 
 .row {
   display: flex;
@@ -120,6 +124,8 @@ div {
   }
 }
 
+/* ESTILOS MESSAGE*/
+
 .message {
   display: none;
 }
@@ -163,6 +169,8 @@ div {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+/* ESTILOS COPIED MESSAGE*/
 
 .icon {
   display: none;
