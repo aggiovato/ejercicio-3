@@ -5,7 +5,7 @@
 Este proyecto es una aplicación web sencilla que permite a los usuarios introducir un número de NIF (DNI) y obtener la letra correspondiente utilizando el algoritmo oficial.
 
 Puedes acceder a la aplicación en el siguiente enlace:
-[nif-calculator.aggiovato.com]([https://nif-calculator.aggiovato.com](https://6701d8bd3db01900080a2dd4--nif-calculator.netlify.app/))
+[nif-calculator.aggiovato.com]((https://6701d8bd3db01900080a2dd4--nif-calculator.netlify.app/))
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c0d993ca-80b8-4876-80c5-2a87f2031dba/deploy-status)](https://app.netlify.com/sites/nif-calculator/deploys)
 
