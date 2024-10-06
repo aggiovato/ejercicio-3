@@ -6,6 +6,7 @@ Este proyecto es una aplicación web sencilla que permite a los usuarios introdu
 
 Puedes acceder a la aplicación en el siguiente enlace:
 [nif-calculator.aggiovato.com](https://nif-calculator.aggiovato.com)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c0d993ca-80b8-4876-80c5-2a87f2031dba/deploy-status)](https://app.netlify.com/sites/nif-calculator/deploys)
 
 
